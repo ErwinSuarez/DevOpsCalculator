@@ -12,6 +12,12 @@ pipeline {
                 bat 'mvn test'
             }
         }
+        stage('Install') {
+            steps {
+                bat 'mvn install'
+            }
+        }
+
         stage('Deploy') {
             steps {
                 bat 'mvn deploy'
