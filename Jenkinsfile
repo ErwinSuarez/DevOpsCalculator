@@ -5,6 +5,9 @@ pipeline {
             steps {
                 bat 'mvn clean'
             }
+            steps {
+                bat 'mvn clean'
+            }
         }
     }
 }
