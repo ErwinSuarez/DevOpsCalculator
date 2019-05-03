@@ -4,19 +4,19 @@ pipeline {
     stages {
         stage ('Build Stage') {
             withMaven(maven: 'Maven36'){
-                sh 'mvn clean compile'
+                bat 'mvn clean compile'
             }
         }
 
         stage ('Test Stage') {
             withMaven(maven: 'Maven36'){
-                sh 'mvn test'
+                bat 'mvn test'
             }
         }
 
         stage ('Deploy Stage') {
             withMaven(maven: 'Maven36'){
-                sh 'mvn deploy'
+                bat 'mvn deploy'
             }
         }
     }
